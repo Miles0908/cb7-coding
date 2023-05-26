@@ -1,0 +1,17 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper{
+  border: 2 px solid;
+  width: 400px;
+}
+
+.wrapper ul li:hover{
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+}
