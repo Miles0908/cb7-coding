@@ -1,0 +1,272 @@
+:root {
+  --color-black: #000000;
+  --color-text: #e7e9ea;
+  --color-hover: rgba(239, 243, 244, 0.1);
+  --color-brand: #1d9bf0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}
+
+header {
+  display: inline-block;
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-left: 12px;
+  display: flex;
+}
+.logo svg {
+  fill: whitesmoke;
+
+  border-radius: 40%;
+}
+.logo:hover {
+  background-color: var(--color-hover);
+  border: 1px solid var(--color-hover);
+  border-radius: 40%;
+}
+
+nav ul {
+  width: 100px;
+  height: 80vh;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li svg {
+  width: 30px;
+  height: 30px;
+}
+
+nav li {
+  display: flex;
+
+  padding: 12px;
+  margin-right: 10px;
+}
+
+nav li:hover {
+  border: 1px solid var(--color-hover);
+  border-radius: 40%;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #f5f8fa;
+  padding: 10px;
+}
+
+.main-content {
+  width: 70vh;
+  padding: 10px;
+}
+
+.headerCta {
+  position: relative;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.buttonTwit {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 36px;
+  background-color: var(--color-brand);
+}
+
+/* profile button */
+.profileButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 36px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.profileButton:hover {
+  background-color: var(--color-hover);
+}
+
+.profileButton__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.profileButton__username {
+  font-weight: 700;
+}
+
+.profileButton__image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileButton__image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.profileButton__actions svg {
+  width: 24px;
+  height: auto;
+  fill: var(--color-text);
+}
+/* end profile button */
+
+.inputTextWrapper {
+
+  background-color: var(--color-brand);
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.inputText {
+  font-size: large;
+  width: 100%;
+  height: 12vh;
+}
+
+.inputImg {
+ 
+  width: 20px;
+  height: 20px;
+}
+
+
+#deciWrap {
+  font-size: 16px;
+  display: flex;
+  padding: 12px;
+  justify-content: space-evenly;
+}
+
+.deci:hover {
+  transition: all 0.4s;
+  border: 1px solid var(--color-hover);
+  background-color: var(--color-text);
+}
+
+.deci1:hover {
+  transition: all 0.4s;
+  border: 1px solid var(--color-hover);
+  background-color: var(--color-text);
+}
+
+.tweet {
+  margin: 20px;
+  display: flex;
+  background-color: var(--color-brand);
+  border: 1px solid var(--color-black);
+  border-radius: 2%;
+  gap: 20px;
+}
+.tweet img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-color: #000000;
+  border-radius: 100%;
+}
+
+.tweet__content {
+  display: flex;
+
+  color: var(--color-text);
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  nav ul {
+    width: 40px;
+    height: 100vh;
+  }
+  nav a {
+    color: transparent;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .headerCta {
+    padding-left: 12px;
+  }
+
+  .buttonTwit {
+    width: 20px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .buttonTwit svg {
+    width: 24px;
+    height: auto;
+    fill: var(--color-black);
+  }
+
+  .buttonTwit .buttonTwit__label {
+    display: none;
+  }
+  .profileButton {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .profileButton__user,
+  .profileButton__actions {
+    display: none;
+  }
+
+  .inputTextWrapper {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .tweet {
+    display: flex;
+    width: 50%;
+  }
+}
